@@ -14,6 +14,7 @@
 		B7E7280D1D1ECEB40033E408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E7280C1D1ECEB40033E408 /* Assets.xcassets */; };
 		B7E728101D1ECEB40033E408 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E7280E1D1ECEB40033E408 /* LaunchScreen.storyboard */; };
 		B7E7281A1D1ED2460033E408 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E728191D1ED2460033E408 /* Movie.swift */; };
+		B7E7281C1D1F07940033E408 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7281B1D1F07940033E408 /* MovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B7E7280F1D1ECEB40033E408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7E728111D1ECEB40033E408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E728191D1ED2460033E408 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		B7E7281B1D1F07940033E408 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				B7E728051D1ECEB40033E408 /* AppDelegate.swift */,
 				B7E728071D1ECEB40033E408 /* ViewController.swift */,
 				B7E728091D1ECEB40033E408 /* Main.storyboard */,
+				B7E7281B1D1F07940033E408 /* MovieViewController.swift */,
 				B7E7280C1D1ECEB40033E408 /* Assets.xcassets */,
 				B7E7280E1D1ECEB40033E408 /* LaunchScreen.storyboard */,
 				B7E728111D1ECEB40033E408 /* Info.plist */,
@@ -232,6 +235,7 @@
 				B7E728081D1ECEB40033E408 /* ViewController.swift in Sources */,
 				B7E728061D1ECEB40033E408 /* AppDelegate.swift in Sources */,
 				B7E7281A1D1ED2460033E408 /* Movie.swift in Sources */,
+				B7E7281C1D1F07940033E408 /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
