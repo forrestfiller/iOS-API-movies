@@ -17,14 +17,14 @@ class Movie: NSObject {
     var overview: String!
     
     
-    func populate(collegeInfo: Dictionary<String, AnyObject>){
+    func populate(movieInfo: Dictionary<String, AnyObject>){
         
         self.id = movieInfo["id"] as? String
         self.title = movieInfo["title"] as? String
         self.vote_average = movieInfo["vote_average"] as? String
         self.overview = movieInfo["overview"] as? String
         
-        if let _imageDoesExist = movieInfo["imagesDoesExist"] {
+        if let _imageDoesExist = movieInfo["imagesDoesExist"] as? String {
             self.image = _imageDoesExist
             // hopefully this will handle any issues with images existing or not
         }
