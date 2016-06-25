@@ -12,8 +12,23 @@ class Movie: NSObject {
     
     var id: String! //id number from the json
     var title: String! //title of movie
-    var image: String! //movie image
+    var image: String? //movie image  not sure what is going to happen here, as I don't have any images
     var vote_average: String! //average of user votes
+    var overview: String!
     
+    
+    func populate(collegeInfo: Dictionary<String, AnyObject>){
+        
+        self.id = movieInfo["id"] as? String
+        self.title = movieInfo["title"] as? String
+        self.vote_average = movieInfo["vote_average"] as? String
+        self.overview = movieInfo["overview"] as? String
+        
+        if let _imageDoesExist = movieInfo["imagesDoesExist"] {
+            self.image = _imageDoesExist
+            // hopefully this will handle any issues with images existing or not
+        }
+        
+        
 
 }
