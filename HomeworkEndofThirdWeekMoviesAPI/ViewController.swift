@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var moviesTable: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
