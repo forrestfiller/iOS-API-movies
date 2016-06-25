@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -15,6 +17,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=98b525225a2fe71d855108eca4fdf12d"
+        
+        Alamofire.request(.GET, url, parameters: nil).responseJSON { response in
+         
+            if let json = response.result.value as? Dictionary<String, AnyObject> {
+                print("json")
+                
+                if let movies = json["movies"] as? Array<Dictionary<String, AnyObject>>{
+                    
+                    for movieInfo in movies {
+                        let movie = Movie()
+                        movie.populate(movieInfo)
+                        self.movieList.append(movie)
+                    }
+                    
+                    self.moviesTable.reloadData()
+                }
+                
+            }
+            
+        }
+                
     }
 
     override func didReceiveMemoryWarning() {
