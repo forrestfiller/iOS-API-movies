@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var moviesTable: UITableView!
-    
+    var movieList = Array<Movie>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,41 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 20 // self.movieList.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        //let movie = self.movieList[indexPath.row]
+        
+        let cellId = "cellId"
+        
+        if let cell = tableView.dequeueReusableCellWithIdentifier(cellId) {
+        print("cellForRowAtPath: ")
+        return cell
+        }
+        
+        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
+        print(".Subtitle reuseIdentifier")
+        return cell
+        
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
