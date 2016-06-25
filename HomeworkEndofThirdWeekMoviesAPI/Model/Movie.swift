@@ -28,7 +28,5 @@ class Movie: NSObject {
             self.image = _imageDoesExist
             // hopefully this will handle any issues with images existing or not
         }
-        
-        
-
+    }
 }

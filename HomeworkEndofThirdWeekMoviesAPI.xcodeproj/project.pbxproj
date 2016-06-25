@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64122E45E04172909F8088BB /* Pods_HomeworkEndofThirdWeekMoviesAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F41BD60766349A73130AA30 /* Pods_HomeworkEndofThirdWeekMoviesAPI.framework */; };
 		B7E728061D1ECEB40033E408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E728051D1ECEB40033E408 /* AppDelegate.swift */; };
 		B7E728081D1ECEB40033E408 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E728071D1ECEB40033E408 /* ViewController.swift */; };
 		B7E7280B1D1ECEB40033E408 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E728091D1ECEB40033E408 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7AFAAB1F7185154E63FC6195 /* Pods-HomeworkEndofThirdWeekMoviesAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeworkEndofThirdWeekMoviesAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeworkEndofThirdWeekMoviesAPI/Pods-HomeworkEndofThirdWeekMoviesAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		8F00D7AB4BBD64DA0CA9A3DB /* Pods-HomeworkEndofThirdWeekMoviesAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeworkEndofThirdWeekMoviesAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeworkEndofThirdWeekMoviesAPI/Pods-HomeworkEndofThirdWeekMoviesAPI.release.xcconfig"; sourceTree = "<group>"; };
+		8F41BD60766349A73130AA30 /* Pods_HomeworkEndofThirdWeekMoviesAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeworkEndofThirdWeekMoviesAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E728021D1ECEB40033E408 /* HomeworkEndofThirdWeekMoviesAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeworkEndofThirdWeekMoviesAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E728051D1ECEB40033E408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E728071D1ECEB40033E408 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64122E45E04172909F8088BB /* Pods_HomeworkEndofThirdWeekMoviesAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0257536227A2F923D9385736 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F41BD60766349A73130AA30 /* Pods_HomeworkEndofThirdWeekMoviesAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7E727F91D1ECEB40033E408 = {
 			isa = PBXGroup;
 			children = (
 				B7E728041D1ECEB40033E408 /* HomeworkEndofThirdWeekMoviesAPI */,
 				B7E728031D1ECEB40033E408 /* Products */,
+				FCD77C8DED4CF19B45C6A4C8 /* Pods */,
+				0257536227A2F923D9385736 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +98,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		FCD77C8DED4CF19B45C6A4C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AFAAB1F7185154E63FC6195 /* Pods-HomeworkEndofThirdWeekMoviesAPI.debug.xcconfig */,
+				8F00D7AB4BBD64DA0CA9A3DB /* Pods-HomeworkEndofThirdWeekMoviesAPI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7E728141D1ECEB40033E408 /* Build configuration list for PBXNativeTarget "HomeworkEndofThirdWeekMoviesAPI" */;
 			buildPhases = (
+				49779DC547D5CC3B1C97B427 /* 📦 Check Pods Manifest.lock */,
 				B7E727FE1D1ECEB40033E408 /* Sources */,
 				B7E727FF1D1ECEB40033E408 /* Frameworks */,
 				B7E728001D1ECEB40033E408 /* Resources */,
+				F99FC18FA553A28254B1772F /* 📦 Embed Pods Frameworks */,
+				879CBF60C521A9321066EEBF /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49779DC547D5CC3B1C97B427 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		879CBF60C521A9321066EEBF /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomeworkEndofThirdWeekMoviesAPI/Pods-HomeworkEndofThirdWeekMoviesAPI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F99FC18FA553A28254B1772F /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomeworkEndofThirdWeekMoviesAPI/Pods-HomeworkEndofThirdWeekMoviesAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B7E727FE1D1ECEB40033E408 /* Sources */ = {
@@ -267,6 +342,7 @@
 		};
 		B7E728151D1ECEB40033E408 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFAAB1F7185154E63FC6195 /* Pods-HomeworkEndofThirdWeekMoviesAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HomeworkEndofThirdWeekMoviesAPI/Info.plist;
@@ -278,6 +354,7 @@
 		};
 		B7E728161D1ECEB40033E408 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F00D7AB4BBD64DA0CA9A3DB /* Pods-HomeworkEndofThirdWeekMoviesAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HomeworkEndofThirdWeekMoviesAPI/Info.plist;
@@ -306,6 +383,7 @@
 				B7E728161D1ECEB40033E408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
