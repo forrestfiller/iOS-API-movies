@@ -9,11 +9,32 @@
 import UIKit
 
 class MovieViewController: UIViewController {
+    
+    var movie: Movie!
+    
 
+    override func loadView() {
+        print("loadView: ")
+        let frame = UIScreen.mainScreen().bounds
+        let view = UIView(frame: frame)
+        view.backgroundColor = .redColor()
+        
+        self.view = view
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {

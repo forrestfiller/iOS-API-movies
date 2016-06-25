@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cellId = "cellId"
         
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellId) {
-        cell.textLabel?.text = movie.title
+        cell.textLabel?.text =  movie.title
         cell.detailTextLabel?.text = movie.vote_average
         cell.imageView?.image = UIImage(named: movie.image!)//i'm concerned about this bang: but xcode complains
         print("cellForRowAtPath: ")
@@ -72,21 +72,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(".Subtitle reuseIdentifier")
         return cell
         
-        
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let movie = self.movieList[indexPath.row]
+        let movieVc = MovieViewController()
+        movieVc.movie = movie
+        self.navigationController?.pushViewController(movieVc, animated: true)
+    }
 
 }
 
