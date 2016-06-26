@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellId) {
         cell.textLabel?.text =  movie.title
         cell.detailTextLabel?.text = movie.vote_average
-        cell.imageView?.image = UIImage(named: movie.image!)//i'm concerned about this bang: but xcode complains
+        cell.imageView?.image = UIImage(named: movie.image!) //concerned about this bang; xcode complains
         print("cellForRowAtPath: ")
         return cell
         }
@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
         cell.textLabel?.text = movie.title
         cell.detailTextLabel?.text = movie.vote_average
-        cell.imageView?.image = UIImage(named: movie.image!)//i'm concerned about this bang: but xcode complains
+        cell.imageView?.image = UIImage(named: movie.image!) //concerned about this bang; xcode complains
         print(".Subtitle reuseIdentifier")
         return cell
         
