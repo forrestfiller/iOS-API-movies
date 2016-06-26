@@ -73,7 +73,6 @@
 		B7E728041D1ECEB40033E408 /* HomeworkEndofThirdWeekMoviesAPI */ = {
 			isa = PBXGroup;
 			children = (
-				B7E728181D1ED2070033E408 /* Images */,
 				B7E728171D1ED1FB0033E408 /* Model */,
 				B7E728051D1ECEB40033E408 /* AppDelegate.swift */,
 				B7E728071D1ECEB40033E408 /* ViewController.swift */,
@@ -92,13 +91,6 @@
 				B7E728191D1ED2460033E408 /* Movie.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		B7E728181D1ED2070033E408 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		FCD77C8DED4CF19B45C6A4C8 /* Pods */ = {
