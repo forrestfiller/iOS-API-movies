@@ -18,16 +18,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-let url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=98b525225a2fe71d855108eca4fdf12d" //removed the '/' which broke the api call...
+let url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=98b525225a2fe71d855108eca4fdf12d"
         
         Alamofire.request(.GET, url, parameters: nil).responseJSON { response in
          
             if let json = response.result.value as? Dictionary<String, AnyObject> {
-                print("json")
+//                print("\(results)")
                 
-                if let movies = json["results"] as? Array<Dictionary<String, AnyObject>>{
-                    
-                    for movieInfo in movies {
+                if let results = json["results"] as? Array<Dictionary<String, AnyObject>>{
+                    print("\(results)")
+                    for movieInfo in results    {
                         let movie = Movie()
                         movie.populate(movieInfo)
                         self.movieList.append(movie)
@@ -58,16 +58,16 @@ let url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&a
         let cellId = "cellId"
         
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellId) {
-        cell.textLabel?.text =  movie.title
-        cell.detailTextLabel?.text = movie.vote_average
+        cell.textLabel?.text =  movie.title //+" = \(movie.id)"
+        cell.detailTextLabel?.text = "Vote Avg: \(movie.vote_average)"
         // cell.imageView?.image = UIImage(named: movie.image!) //concerned about this bang; xcode complains
         print("cellForRowAtPath: ")
         return cell
         }
         
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
-        cell.textLabel?.text = movie.title
-        cell.detailTextLabel?.text = movie.vote_average
+        cell.textLabel?.text = movie.title //+" = \(movie.id)"
+        cell.detailTextLabel?.text = "Vote Avg: \(movie.vote_average)"
         // cell.imageView?.image = UIImage(named: movie.image!) //concerned about this bang; xcode complains
         print(".Subtitle reuseIdentifier")
         return cell
