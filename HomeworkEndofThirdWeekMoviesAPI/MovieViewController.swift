@@ -34,8 +34,8 @@ class MovieViewController: UIViewController {
         
         print("MOVIE: \(self.movie.title)")
         
-        let url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=98b525225a2fe71d855108eca4fdf12d/" + movie.id
-        //put a '/' at end of link
+        let url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=98b525225a2fe71d855108eca4fdf12d" + movie.id
+        // removed the previous "put a '/' at end of link" which broke the api call...
         
         Alamofire.request(.GET, url, parameters: nil).responseJSON { response in
             

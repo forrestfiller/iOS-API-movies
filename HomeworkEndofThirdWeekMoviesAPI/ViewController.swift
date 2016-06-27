@@ -18,14 +18,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=98b525225a2fe71d855108eca4fdf12d/" //put a '/' at end of link
+let url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=98b525225a2fe71d855108eca4fdf12d" //removed the '/' which broke the api call...
         
         Alamofire.request(.GET, url, parameters: nil).responseJSON { response in
          
             if let json = response.result.value as? Dictionary<String, AnyObject> {
                 print("json")
                 
-                if let movies = json["movies"] as? Array<Dictionary<String, AnyObject>>{
+                if let movies = json["results"] as? Array<Dictionary<String, AnyObject>>{
                     
                     for movieInfo in movies {
                         let movie = Movie()
@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellId) {
         cell.textLabel?.text =  movie.title
         cell.detailTextLabel?.text = movie.vote_average
-        cell.imageView?.image = UIImage(named: movie.image!) //concerned about this bang; xcode complains
+        // cell.imageView?.image = UIImage(named: movie.image!) //concerned about this bang; xcode complains
         print("cellForRowAtPath: ")
         return cell
         }
@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
         cell.textLabel?.text = movie.title
         cell.detailTextLabel?.text = movie.vote_average
-        cell.imageView?.image = UIImage(named: movie.image!) //concerned about this bang; xcode complains
+        // cell.imageView?.image = UIImage(named: movie.image!) //concerned about this bang; xcode complains
         print(".Subtitle reuseIdentifier")
         return cell
         
